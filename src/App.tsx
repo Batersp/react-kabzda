@@ -7,7 +7,9 @@ import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOf
 import {OnOff} from "./components/OnOff/OnOff";
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledInput} from "./components/UncontrolledInput/UncontrolledInput";
-import {Input} from "./Input/Input";
+import {Input} from "./components/Input/Input";
+import {Checkbox} from "./components/Checkbox/Checkbox";
+import {Selected} from "./components/Selected/Selected";
 
 
 
@@ -16,6 +18,9 @@ function App() {
     const [ratingValue, setRatingValue] = useState<RatingValueType>(4)
     const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
     const [switchOn, setSwitchOn] = useState<boolean>(true)
+    const [inputValue, setInputValue] = useState('write something')
+    const [chekboxValue, setCheckboxValue] = useState(false)
+    const [selectedValue, setSelectedValue] = useState<string | undefined>('2')
 
     return (
         <div className='App'>
@@ -29,7 +34,11 @@ function App() {
 
             <UncontrolledInput/>
 
-            <Input value={'lalalala'}/>
+            <Input value={inputValue} callBack={setInputValue}/>
+
+            <Checkbox value={chekboxValue} callBack={setCheckboxValue}/>
+
+            <Selected value={selectedValue} callBack={setSelectedValue}/>
         </div>
     );
 }

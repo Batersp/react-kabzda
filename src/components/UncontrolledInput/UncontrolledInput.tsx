@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useRef, useState} from "react";
+import React, {useRef, useState} from "react";
 
 export const UncontrolledInput = () => {
 
