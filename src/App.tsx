@@ -6,6 +6,8 @@ import Accordion from "./components/Accordion/Accordion";
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import {OnOff} from "./components/OnOff/OnOff";
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
+import {UncontrolledInput} from "./components/UncontrolledInput/UncontrolledInput";
+import {Input} from "./Input/Input";
 
 
 
@@ -23,6 +25,11 @@ function App() {
             <OnOff on={switchOn} onChange={() => setSwitchOn(!switchOn)}/>
             <UncontrolledRating />
             <Rating value={ratingValue} onClick={setRatingValue}/>
+
+
+            <UncontrolledInput/>
+
+            <Input value={'lalalala'}/>
         </div>
     );
 }
