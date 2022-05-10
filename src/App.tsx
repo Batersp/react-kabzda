@@ -13,7 +13,6 @@ import {Selected} from "./components/Selected/Selected";
 import {NewSelected} from "./components/Selected/NewSelected";
 
 
-
 function App() {
 
     const [ratingValue, setRatingValue] = useState<RatingValueType>(4)
@@ -44,27 +43,12 @@ function App() {
     ]
 
     const itemsForNewSelected = [
-        {
-            name: 'Pasha',
-            value: '1',
-            hobbies:['football', 'dota2', 'JS']
-        },
-        {
-            name: 'Bobi',
-            value: '2',
-            hobbies:['Golf']
-        },
-        {
-            name: 'Nikolas',
-            value: '3',
-            hobbies:['movies', 'reed books', 'anime', 'cookies']
-        },
-        {
-            name: 'Martey',
-            value: '4',
-            hobbies:['Basketball', 'Girls', 'Boys']
-        },
+        {value: '1', title: 'Arsenal'},
+        {value: '2', title: 'Barselona'},
+        {value: '3', title: 'Madrid'},
+        {value: '4', title: 'PSG'}
     ]
+
 
     const onItemClick = (value: string) => {
         console.log(`user with value ${value} was be clicked`)
@@ -86,7 +70,7 @@ function App() {
 
             <Checkbox value={chekboxValue} callBack={setCheckboxValue}/>
 
-            <Selected value={selectedValue} callBack={setSelectedValue}/>
+
 
             <Accordion
                 titleValue={'Menu'}
@@ -96,11 +80,10 @@ function App() {
                 onItemClick={onItemClick}
             />
 
-            <NewSelected
-                item={itemsForNewSelected}
-                value={newSelectedValue}
-                callBack={setNewSelectedValue}
-            />
+
+            <Selected value={selectedValue} callBack={setSelectedValue}/>
+
+            <NewSelected value={newSelectedValue} callBack={setNewSelectedValue} itemsForNewSelected={itemsForNewSelected}/>
         </div>
     );
 }
