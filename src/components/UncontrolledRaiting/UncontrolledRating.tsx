@@ -6,7 +6,7 @@ import {Star} from "./Star/Star";
     value: 0 | 1 | 3 | 4 | 5 | 6 | 2
 }*/
 
-export function UncontrolledRating() {
+export function UncontrolledRatingMemo() {
 
     let [value, setValue] = useState<number>(3)
 
@@ -24,6 +24,6 @@ export function UncontrolledRating() {
 
 }
 
-
+export const UncontrolledRating = React.memo(UncontrolledRatingMemo)
 
 

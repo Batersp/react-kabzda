@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {UncontrolledRating} from "./components/UncontrolledRaiting/UncontrolledRating";
-import Accordion from "./components/Accordion/Accordion";
+import {Accordion} from "./components/Accordion/Accordion";
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import {OnOff} from "./components/OnOff/OnOff";
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
@@ -11,6 +11,7 @@ import {Input} from "./components/Input/Input";
 import {Checkbox} from "./components/Checkbox/Checkbox";
 import {Selected} from "./components/Selected/Selected";
 import {NewSelected} from "./components/Selected/NewSelected";
+import {MyCapital} from "./components/ReactMemo/ReactMemo";
 
 
 function App() {
@@ -84,6 +85,9 @@ function App() {
             <Selected value={selectedValue} callBack={setSelectedValue}/>
 
             <NewSelected value={newSelectedValue} callBack={setNewSelectedValue} itemsForNewSelected={itemsForNewSelected}/>
+
+            <MyCapital/>
+
         </div>
     );
 }

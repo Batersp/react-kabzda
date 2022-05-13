@@ -13,7 +13,7 @@ type AccordionPropsType = {
     onItemClick: (value: string) => void
 }
 
-function Accordion(props: AccordionPropsType) {
+export function AccordionMemo(props: AccordionPropsType) {
 
     return (
         <div>
@@ -48,4 +48,4 @@ function AccordionBody(props:AccordionBodyPropsType) {
     );
 }
 
-export default Accordion
+export const Accordion = React.memo(AccordionMemo)

@@ -5,7 +5,7 @@ type PropsType = {
 }
 
 
-export const UncontrolledOnOff = (props: PropsType) => {
+export const UncontrolledOnOffMemo = (props: PropsType) => {
 
 
     const [on, setOn] = useState<boolean>(false)
@@ -57,3 +57,4 @@ export const UncontrolledOnOff = (props: PropsType) => {
     );
 };
 
+export const UncontrolledOnOff = React.memo(UncontrolledOnOffMemo)

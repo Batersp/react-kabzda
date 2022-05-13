@@ -5,7 +5,7 @@ type InputPropsType = {
     callBack: (newValue: string) => void
 }
 
-export const Input = (props : InputPropsType) => {
+export const InputMemo = (props : InputPropsType) => {
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         props.callBack(e.currentTarget.value)
@@ -17,3 +17,5 @@ export const Input = (props : InputPropsType) => {
         </div>
     )
 }
+
+export const Input = React.memo(InputMemo)

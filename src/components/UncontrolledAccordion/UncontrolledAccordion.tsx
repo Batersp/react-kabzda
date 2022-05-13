@@ -6,7 +6,7 @@ type AccordionPropsType = {
     titleValue: string
 }
 
-export function UncontrolledAccordion(props: AccordionPropsType) {
+export function UncontrolledAccordionMemo(props: AccordionPropsType) {
 
     const [state, dispatch] = useReducer(collapsedReducer, {collapsed: false})
 
@@ -33,3 +33,4 @@ function AccordionBody() {
     );
 }
 
+export const UncontrolledAccordion = React.memo(UncontrolledAccordionMemo)

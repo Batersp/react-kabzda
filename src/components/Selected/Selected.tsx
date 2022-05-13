@@ -5,7 +5,7 @@ type SelectedPropsType = {
     callBack: (newValue: string) => void
 }
 
-export const Selected = (props: SelectedPropsType) => {
+export const SelectedMemo = (props: SelectedPropsType) => {
 
     const onChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
         props.callBack(e.currentTarget.value)
@@ -22,3 +22,5 @@ export const Selected = (props: SelectedPropsType) => {
         </div>
     )
 }
+
+export const Selected = React.memo(SelectedMemo)

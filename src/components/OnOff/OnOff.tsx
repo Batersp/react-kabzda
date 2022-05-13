@@ -7,7 +7,7 @@ type OnOffPropsType = {
 }
 
 
-export const OnOff = (props:OnOffPropsType) => {
+export const OnOffMemo = (props:OnOffPropsType) => {
 
     const onStyle = {
         width: '30px',
@@ -46,3 +46,5 @@ export const OnOff = (props:OnOffPropsType) => {
         </div>
     );
 }
+
+export const OnOff = React.memo(OnOffMemo)
