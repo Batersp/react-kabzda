@@ -12,6 +12,9 @@ import {Checkbox} from "./components/Checkbox/Checkbox";
 import {Selected} from "./components/Selected/Selected";
 import {NewSelected} from "./components/Selected/NewSelected";
 import {MyCapital} from "./components/ReactMemo/ReactMemo";
+import {Example1} from "./components/ExampleWithUseMemo/Example1";
+import {HelpsToReactMemo} from "./components/ExampleWithUseMemo/DifficultCountingExample";
+import {Helps} from "./components/ExampleWithUseMemo/ExampleWithSelect";
 
 
 function App() {
@@ -57,11 +60,11 @@ function App() {
 
     return (
         <div className='App'>
-            <UncontrolledAccordion titleValue={'Users'} />
+            <UncontrolledAccordion titleValue={'Users'}/>
 
             <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
             <OnOff on={switchOn} onChange={() => setSwitchOn(!switchOn)}/>
-            <UncontrolledRating />
+            <UncontrolledRating/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
 
 
@@ -70,7 +73,6 @@ function App() {
             <Input value={inputValue} callBack={setInputValue}/>
 
             <Checkbox value={chekboxValue} callBack={setCheckboxValue}/>
-
 
 
             <Accordion
@@ -84,17 +86,21 @@ function App() {
 
             <Selected value={selectedValue} callBack={setSelectedValue}/>
 
-            <NewSelected value={newSelectedValue} callBack={setNewSelectedValue} itemsForNewSelected={itemsForNewSelected}/>
+            <NewSelected value={newSelectedValue} callBack={setNewSelectedValue}
+                         itemsForNewSelected={itemsForNewSelected}/>
 
             <MyCapital/>
+
+            <Example1/>
+
+            <HelpsToReactMemo/>
+
+            <hr/>
+            <Helps/>
 
         </div>
     );
 }
-
-
-
-
 
 
 export default App;

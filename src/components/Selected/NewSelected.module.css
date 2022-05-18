@@ -3,7 +3,7 @@
 }
 
 .items {
-    position: absolute;
+    width: 80px;
     padding: 5px;
     border: black solid 1px;
 }
