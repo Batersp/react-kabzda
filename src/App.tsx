@@ -16,6 +16,7 @@ import {Example1} from "./components/ExampleWithUseMemo/Example1";
 import {HelpsToReactMemo} from "./components/ExampleWithUseMemo/DifficultCountingExample";
 import {Helps} from "./components/ExampleWithUseMemo/ExampleWithSelect";
 import {Clock} from "./components/Clock/Clock";
+import {SetTimeOutWithUseEffect} from "./components/SetTimeOutWithUseEffect/SetTimeOutWithUseEffect";
 
 
 
@@ -100,6 +101,7 @@ function App() {
             <hr/>
             <Helps/>
             <Clock mode={"Analog"}/>
+            <SetTimeOutWithUseEffect/>
 
         </div>
     );
