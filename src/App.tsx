@@ -15,7 +15,7 @@ import {MyCapital} from "./components/ReactMemo/ReactMemo";
 import {Example1} from "./components/ExampleWithUseMemo/Example1";
 import {HelpsToReactMemo} from "./components/ExampleWithUseMemo/DifficultCountingExample";
 import {Helps} from "./components/ExampleWithUseMemo/ExampleWithSelect";
-import {Clock} from "./components/training/Clock";
+import {Clock} from "./components/Clock/Clock";
 
 
 
@@ -99,7 +99,7 @@ function App() {
 
             <hr/>
             <Helps/>
-            <Clock/>
+            <Clock mode={"Analog"}/>
 
         </div>
     );
